@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Emag Products</title>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
     <style>
         table {
             border-collapse: collapse;
@@ -18,10 +19,20 @@
         th {
             background-color: green;
         }
+        #logo_img_id {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            z-index: -9999;
+
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Available Products</h1>
+    <h1 style="text-align: center; color: black;" onclick="firstFunction()" id="titleId">Available Products</h1>
     <table>
         <tr>
             <th>Name</th>
@@ -36,5 +47,7 @@
         </tr>
         {% endfor %}
     </table>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Logo_eMAG_%282019%29.svg/2560px-Logo_eMAG_%282019%29.svg.png" alt="Emag Logo"  id="logo_img_id">
+
 </body>
 </html>

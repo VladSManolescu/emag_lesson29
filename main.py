@@ -27,12 +27,12 @@ def second_function():
 def web_login():
     user = request.form['username']
     passwd = request.form['password']
-    if user in users.keys():
-        if passwd == users[user]:
-            data = emag_db.read_products(config)
-            return render_template("home.html", data=data)
+    # if user in users.keys():
+    #     if passwd == users[user]:
+    data = emag_db.read_products(config)
+    return render_template("home.html", data=data)
 
-    return render_template("login.html")
+    # return render_template("login.html")
 
 
 
